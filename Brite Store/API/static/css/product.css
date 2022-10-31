@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
+         url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+table{
+    float: left;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+table {
+	border-spacing: 20px;
+}
+.txt-heading{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+#productName {
+	text-align: center;
+	font-weight: bold;
+}
+
+#productPrice {
+	text-align: center;
+}
+#itemImage {
+    padding-left: 30px;
+	height: 200px;
+	width: 180px;
+}

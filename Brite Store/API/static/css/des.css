@@ -1,0 +1,44 @@
+#display {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+#productImage {
+	height: 250px;
+	width: 200px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+#productDescription {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+
+	display: inline-block;
+	font-size: 19px;
+}
+
+#descriptionTable td {
+	padding-top: 20px;
+	width: 250px;
+}
+
+#addToCart {
+	margin-top: 20px;
+	margin-left: 30px;
+	font-size: 20px;
+}
+
+.txt{
+	font-weight: bold;
+}
+
+h2{
+	padding-top: 20px;
+}

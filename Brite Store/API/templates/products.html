@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Products</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{{ url_for('static', filename='css/head.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/product.css') }}" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    </head>
+    <body>
+		<header>
+			<div class="first">
+				<ul>
+					<li><a href="http://127.0.0.1:5000/">Home</a></li>
+					<li class="use"><a href="http://127.0.0.1:5000/products">Buy Products</a></li>
+					<li><a href="">About US</a></li>
+					<li><a href="">Contact Us</a></li>
+                    <li><a href="http://127.0.0.1:5000/yourcart"><i class="bi bi-cart4"></i> Cart {{noOfItems}}</a></li>
+                    {% if not loggedIn %}
+                    <li><a href="http://127.0.0.1:5000/login">Login</a></li>
+                    {% else %}
+                    <li><a href="http://127.0.0.1:5000/logout">{{firstName}}</a></li>
+                    {% endif %}
+				</ul>
+			</div>
+		</header>
+        <div class="txt-heading">Products</div>
+
+        <div>
+            {% for data in itemData%}
+            <table>
+                <tr id="productImage">
+                    <td>
+                        <a href="/productDescription?productId={{data[0]}}">
+                          <img src="{{ url_for('static', filename='images/1.png') }}" id="itemImage" />
+                        </a>
+                    </td>
+                </tr>
+                <tr id="productName">
+                    <td>{{data[1]}}</td>
+                </tr>
+                <tr id="productPrice">
+                    <td>${{data[2]}}</td>
+                </tr>
+            </table>
+            {% endfor %}
+        </div>
+    </body>
+</html>
